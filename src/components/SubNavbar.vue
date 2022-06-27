@@ -24,19 +24,12 @@
 <script>
 export default {
   name: 'SubNavbar',
-//   methods: {
-//     showMenu() {
-//       const menu = document.getElementById('#menu');
-//       menu.addClass('showing');
-//     },
-//   },
+  methods: {
+    showMenu(){
+        $(".menu").toggleClass("showing");
+    }
+  }
 };
-
-$(function () {
-    $(".burgar").on("click", function () {
-    $(".menu").toggleClass("showing");
-    })
-})
 </script>
 
 <style scoped>

@@ -53,10 +53,11 @@ export default {
     }
     /* 產品項目區塊 */
     .main{
-        position: relative;
+        /* position: relative; */
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         background-color: #fff;
-        top: -70vh;
+        margin-top: -70vh;
+        margin-bottom: 20vh;
         border-radius: 10px;
     }
     .main-products{
@@ -74,7 +75,7 @@ export default {
         }
     }
 
-    @media screen and (max-width: 786px){
+    @media screen and (max-width: 576px){
         /* .main-background{
             height: 50vh;
             background-size: cover;
