@@ -2,16 +2,19 @@
 <section>
         <div class="container-fluid">
             <div class="row d-flex flex-column text-center">
-                <div class="col-12 sticky" id="navbar">
-                    <nav class="main-nav">
-                        <ul class="col-12 menu overflow-hidden fs-2">
-                            <li><router-link to="/">首頁</router-link> </li>
-                            <li><router-link to="/about">關於</router-link></li>
-                            <li><router-link to="/products">比賽周邊</router-link></li>
-                            <li><router-link to="/mineVerse">元宇宙商圈</router-link></li>
-                        </ul>
-                    </nav>
+            <div class="col sticky" id="navbar">
+                <div class="burgar p-3" @click="showMenu()">
+                <i class="bi bi-list"></i>
                 </div>
+                <nav>
+                    <ul id='menu' class="col menu overflow-hidden fs-3 fw-bold">
+                        <li><router-link to="/">首頁</router-link> </li>
+                        <li><router-link to="/about">關於</router-link></li>
+                        <li><router-link to="/products">比賽周邊</router-link></li>
+                        <li><router-link to="/mineVerse">元宇宙商圈</router-link></li>
+                    </ul>
+                </nav>
+            </div>
             </div>
         </div>
     </section>
@@ -21,11 +24,34 @@
 <script>
 export default {
   name: 'SubNavbar',
+//   methods: {
+//     showMenu() {
+//       const menu = document.getElementById('#menu');
+//       menu.addClass('showing');
+//     },
+//   },
 };
+
+$(function () {
+    $(".burgar").on("click", function () {
+    $(".menu").toggleClass("showing");
+    })
+})
 </script>
 
 <style scoped>
- nav ul {
+ /* navbar */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a, a:link, a:hover{
+    text-decoration: none;
+}
+
+nav ul {
 display: flex;
 justify-content: center;
 overflow: hidden;
@@ -63,22 +89,50 @@ color:white;
 }
 
 .sticky a:hover{
-color:white;
+    color:white;
 }
 
-@media handheld,screen and (max-width: 786px){
-    nav a{
-        font-size: 1.1rem;
-        width: 95px;
-        height: 48px;
-    }
-    .sticky{
-        height: 50px;
-    }
-    nav a:hover{
-    color: black;
+@media screen and (max-width: 786px){
+
+.burgar{
+    display: block;
+    float: right;
+}
+
+.showing{
+    max-height:15em;
+    margin-top: 50px;
+}
+
+#navbar{
+    background: rgba(0, 0, 0,0.7);
+    position: fixed;
+}
+
+nav a{
+    color: white;
+}
+
+nav a:hover{
+    color: white;
     border-bottom: 3px solid yellow;
     }
+
+nav ul{
+    color:white;
+    flex-direction: column;
+    align-self:flex-end;
+    max-height: 0px;
+    transition: 1s;
+    padding-left: 50px;
+    }
+
+nav ul li {
+    box-sizing: border-box;
+    width:100%;
+    text-align: center;
+}
+
 }
 
 </style>

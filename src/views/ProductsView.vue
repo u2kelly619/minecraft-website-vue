@@ -54,19 +54,26 @@ export default {
     /* 產品項目區塊 */
     .main{
         position: relative;
-        box-shadow: 6px 6px 10px rgba(128, 128, 128, 0.5);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         background-color: #fff;
-        top: -50vh;
+        top: -70vh;
         border-radius: 10px;
     }
     .main-products{
         padding: 0;
     }
-    @media screen and (max-width: 1400px){
+    /* @media screen and (max-width: 1400px){
         .main{
-            border-radius: 0;
+            box-shadow:0 0px rgba(0,0,0,0);
+        }
+    } */
+
+    @media screen and (max-width: 992px){
+        .chicken{
+            display: none;
         }
     }
+
     @media screen and (max-width: 786px){
         /* .main-background{
             height: 50vh;
@@ -75,9 +82,6 @@ export default {
         .main{
             box-shadow: none ;
             border-radius: 0;
-        }
-        .chicken{
-            width: 90px;
         }
     }
     /* 卡片內容 */

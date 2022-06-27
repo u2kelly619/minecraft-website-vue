@@ -2,7 +2,7 @@
     <footer class="container-fluid p-3 fs-3 footer">
         <div class="row d-flex justify-content-center">
             <div class="col-10 col-md-4 col-lg-4 p-3">
-                <span class="mb-3 fs-2">比賽場次</span>
+                <p class="mb-3 fs-2">比賽場次</p>
                 <ul>
                     <li class="fs-5">北護場 05/28 舉辦 </li>
                     <li class="fs-5">文大場 05/29 舉辦</li>
@@ -11,7 +11,7 @@
                 </ul>
             </div>
             <div class="col-10 col-md-4 col-lg-4 p-3">
-                <span class="mb-3 fs-2">聯絡資訊</span>
+                <p class="mb-3 fs-2">聯絡資訊</p>
                 <ul>
                     <li class="fs-5"><i class="bi bi-telephone-fill fs-4"></i> 02-2701 0928<br>
                         (週一至週五12:00 ~ 18:30)
@@ -35,6 +35,9 @@ export default {
 </script>
 
 <style scoped>
+ul {
+    padding-left: 0 !important;
+}
 footer{
     font-size: 0.9rem;
     }

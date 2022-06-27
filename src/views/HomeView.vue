@@ -7,16 +7,16 @@
     <div class="container p-5 introduction">
       <div class="row d-flex justify-content-evenly text-center fs-1">
         <div class="col col-md-5 col-lg-4 mb-5">
-          <div><img src="@/assets/homepage/zombie.png" alt="create-picture"></div>
-          <div class="introbg1">有時生存有時創造</div>
+          <div class="mb-5"><img src="@/assets/homepage/zombie.png" alt="create-picture"></div>
+          <div class="fs-4">有時生存有時創造</div>
         </div>
         <div class="col col-md-5 col-lg-4 mb-5">
-          <div><img src="@/assets/homepage/group.png" alt="group-picture"></div>
-          <div class="introbg2">耐人尋味的關卡</div>
+          <div class="mb-5"><img src="@/assets/homepage/group.png" alt="group-picture"></div>
+          <div class="fs-4">耐人尋味的關卡</div>
         </div>
         <div class="col col-md-5 col-lg-4 mb-5">
-          <div><img src="@/assets/homepage/castle.png" alt="build-picture"></div>
-          <div class="introbg3">想蓋自己的小天地？那就蓋吧！</div>
+          <div class="mb-5"><img src="@/assets/homepage/castle.png" alt="build-picture"></div>
+          <div class="fs-4">想蓋自己的小天地？那就蓋吧！</div>
         </div>
       </div>
     </div>
@@ -26,13 +26,15 @@
     <div class="row fw-bold">
       <div class="col-md-6 col-sm-12 row text-center mb-5">
         <div class="title mb-5 text-center fs-1 fw-bold">社群平台</div>
-        <a class="col-6" href="https://www.facebook.com/codedriven/"><img src="@/assets/homepage/fbicon.png" alt="粉專"></a>
-        <a class="col-6" href=""><img src="@/assets/homepage/discord.png" alt="discord"></a>
+        <a class="col-6" href="https://www.facebook.com/codedriven/" target="_blank"><img src="@/assets/homepage/fbicon.png" alt="粉專"></a>
+        <a class="col-6" href="" target="_blank">
+          <img src="@/assets/homepage/discord.png" alt="discord">
+        </a>
       </div>
       <div class="col-md-6 col-sm-12 row text-center mb-5">
         <div class="title mb-5 text-center fs-1 fw-bold">合作夥伴</div>
-        <a class="col-6" href="https://www.sce.pccu.edu.tw/"><img src="@/assets/homepage/ntcicon.png" alt="文大"></a>
-        <a class="col-6" href="https://www.codedriven.org/"><img src="@/assets/homepage/codedrivenicon.png" alt="程式驅動"></a>
+        <a class="col-6" href="https://www.sce.pccu.edu.tw/" target="_blank"><img src="@/assets/homepage/ntcicon.png" alt="文大"></a>
+        <a class="col-6" href="https://www.codedriven.org/" target="_blank"><img src="@/assets/homepage/codedrivenicon.png" alt="程式驅動"></a>
       </div>
     </div>
   </div>

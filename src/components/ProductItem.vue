@@ -2,7 +2,7 @@
   <div class="col-12 col-md-4">
     <div class="card">
         <div class="item-img">
-          <img :src="images" class="card-img-top" alt="...">
+          <img :src="images" class="card-img-top img-fluid px-3" alt="...">
         </div>
         <div class="card-body">
           <p class="card-text fs-5">Item Name</p>
