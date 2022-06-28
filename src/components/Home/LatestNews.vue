@@ -2,6 +2,20 @@
 <div class="container-fluid news p-5">
     <div class="row d-flex justify-content-center text-center fs-3">
       <img src="@/assets/2022.png" class='minecraft-banner mt-5 w-75' alt="">
+      <div class="col col-md-4">
+        <h2 class="fs-1 fw-bolder">明道場</h2>
+        <h3 class="">伺服器位置</h3>
+        <div class="d-flex justify-content-center">
+          <div class="border px-5">
+            <span class="pixel" id="server">mbc94.ntc.im</span>
+          </div>
+          <div class="tooltip__layout" @click="flagClick">
+            <span class="ms-2"><i class="bi bi-files copy"></i></span>
+            <span class="tooltip__content" :class="{'show': flag}">Copied!</span>
+          </div>
+        </div>
+      </div>
+  
       <h2 class="fs-1 fw-bolder my-5">最新消息</h2>
         <div class="col col-md-10 col-lg-10 accordion" id="accordionExample">
           <div class="accordion-item">
@@ -72,12 +86,39 @@
 </template>
 
 <script>
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
 export default {
   name: 'LatestNews',
+  data: function () {
+    return {
+      test: 'abasdfasdfasdfc',
+      flag: false
+    }
+  },
+  methods: {
+    copy(){
+      let server = document.getElementById('server');
+      /* Copy the text inside the text field */
+      navigator.clipboard.writeText(server.textContent);
+      /* Alert the copied text */
+      alert("Copied the text: " + server.textContent);
+      // var tooltip = document.getElementById("myTooltip");
+      // tooltip.innerHTML = "Copied!";
+    },
+    flagClick () {
+      this.flag = true
+      setTimeout(()=>{
+        this.flag = false
+      }, 1000)
+    }
+  }
 };
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 .panel-heading .accordion-toggle:before {
     content: "－";
 }
@@ -87,5 +128,50 @@ export default {
 .minecraft-banner:hover {
   transform: scale(1.1);
   transition: transform 0.5s ease;
+}
+
+.pixel {
+  font-family: 'VT323', monospace;
+}
+.copy {
+  font-size: 20px;
+  color: #666;
+}
+.copy-btn{
+  border: none;
+}
+[class*=" bi-"]::before {
+  line-height: 1.1 !important;
+}
+
+.tooltip__layout {
+  position: relative;
+  display:inline-block;
+}
+
+.tooltip__content.show {
+   opacity:1;
+   transition: 1s;
+   -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.tooltip__content {
+    padding-left: 50px;
+    right:-65px;
+    top:7px;
+    background: #616161;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    padding: 5px 8px;
+    position: absolute;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    width: auto;
+    opacity:0;
 }
 </style>

@@ -38,15 +38,15 @@
       </div>
     </div>
   </div>
-  <div id="server">
-      <div class="container p-5 pt-0">
-        <div class="d-flex flex-column justify-content-center">
-          <div class="text-center mb-5 fs-1 fw-bold">伺服器狀態</div>
-          <a href="https://minecraft-mp.com/server-s303741"
-          target="_blank"><img :src="leaderboard" class="w-100" alt="leaderboard"></a>
-        </div>
+  <!-- <div id="server">
+    <div class="container p-5 pt-0">
+      <div class="d-flex flex-column justify-content-center">
+        <div class="text-center mb-5 fs-1 fw-bold">伺服器狀態</div>
+        <a href="https://minecraft-mp.com/server-s303741"
+        target="_blank"><img :src="leaderboard" class="w-100" alt="leaderboard"></a>
       </div>
     </div>
+  </div> -->
 
   <my-footer></my-footer>
 </template>
@@ -73,6 +73,7 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 nav ul {
 display: flex;
