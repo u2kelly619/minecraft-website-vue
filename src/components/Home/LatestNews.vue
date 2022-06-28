@@ -91,7 +91,6 @@ export default {
   name: 'LatestNews',
   data: function () {
     return {
-      test: 'abasdfasdfasdfc',
       flag: false
     }
   },
