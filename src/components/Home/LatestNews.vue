@@ -4,7 +4,7 @@
       <img src="@/assets/2022.png" class='minecraft-banner mt-5 w-75' alt="">
       <div class="col col-md-4">
         <h2 class="fs-1 fw-bolder">明道場</h2>
-        <h3 class="">伺服器位置</h3>
+        <h5 class="">伺服器位置</h5>
         <div class="d-flex justify-content-center">
           <div class="border px-5">
             <span class="pixel" id="server">mbc94.ntc.im</span>
@@ -86,8 +86,6 @@
 </template>
 
 <script>
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 export default {
   name: 'LatestNews',
@@ -98,20 +96,16 @@ export default {
     }
   },
   methods: {
-    copy(){
-      let server = document.getElementById('server');
-      /* Copy the text inside the text field */
-      navigator.clipboard.writeText(server.textContent);
-      /* Alert the copied text */
-      alert("Copied the text: " + server.textContent);
-      // var tooltip = document.getElementById("myTooltip");
-      // tooltip.innerHTML = "Copied!";
-    },
     flagClick () {
       this.flag = true
       setTimeout(()=>{
         this.flag = false
       }, 1000)
+      let server = document.getElementById('server');
+      /* Copy the text inside the text field */
+      navigator.clipboard.writeText(server.textContent);
+      /* Alert the copied text */
+      // alert("Copied the text: " + server.textContent);
     }
   }
 };
@@ -147,6 +141,9 @@ export default {
 .tooltip__layout {
   position: relative;
   display:inline-block;
+}
+.tooltip__layout:hover {
+  cursor: pointer;
 }
 
 .tooltip__content.show {
