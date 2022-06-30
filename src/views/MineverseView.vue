@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-        <img class="chicken" src="../assets/Chicken.png" alt="">
+        <img class="herobrine" src="../assets/Herobrine.png" alt="">
     </section>
   <MyFooter></MyFooter>
 </template>
@@ -41,15 +41,17 @@ export default {
 </script>
 
 <style scoped>
-.chicken{
+.herobrine{
     float: right;
     position: relative;
+    bottom: 100px;
+    right: 30px;
 }
 
 /* main */
 .main-background{
     height: 100vh;
-    background: no-repeat center url('../assets/bg/2022-04-22_02.33.39.png');
+    background: no-repeat center url('../assets/bg/2022-04-22_02.49.37.png');
     background-size: cover;
     display: flex;
     justify-content: center;

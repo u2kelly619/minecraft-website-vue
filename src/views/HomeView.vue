@@ -2,9 +2,10 @@
 <template>
   <MainNavbar></MainNavbar>
   <latest-news></latest-news>
+
   <!-- introduction -->
   <div class="intro">
-    <div class="container p-5 introduction">
+    <div class="container-fluid p-5 introduction">
       <div class="row d-flex justify-content-evenly text-center fs-1">
         <div class="col col-md-5 col-lg-4 mb-5">
           <div class="mb-5"><img src="@/assets/homepage/zombie.png" alt="create-picture"></div>
@@ -22,7 +23,7 @@
     </div>
   </div>
   <!-- icons -->
-  <div id="info" class="container p-5">
+  <div id="info" class="container-fluid p-5">
     <div class="row fw-bold">
       <div class="col-md-6 col-sm-12 row text-center mb-5">
         <div class="title mb-5 text-center fs-1 fw-bold">社群平台</div>

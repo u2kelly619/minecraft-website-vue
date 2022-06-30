@@ -2,22 +2,22 @@
     <footer class="container-fluid p-3 fs-3 footer">
         <div class="row d-flex justify-content-center">
             <div class="col-10 col-md-4 col-lg-4 p-3">
-                <p class="mb-3 fs-2">比賽場次</p>
+                <p class="mb-3 fs-3">比賽場次</p>
                 <ul>
-                    <li class="fs-5">北護場 05/28 舉辦 </li>
-                    <li class="fs-5">文大場 05/29 舉辦</li>
-                    <li class="fs-5">明道場 07/02 舉辦 </li>
-                    <li class="fs-5">真理場 09/~ 舉辦</li>
+                    <li class="fs-6">北護場 05/28 舉辦 </li>
+                    <li class="fs-6">文大場 05/29 舉辦</li>
+                    <li class="fs-6">明道場 07/02 舉辦 </li>
+                    <li class="fs-6">真理場 09/~ 舉辦</li>
                 </ul>
             </div>
             <div class="col-10 col-md-4 col-lg-4 p-3">
-                <p class="mb-3 fs-2">聯絡資訊</p>
+                <p class="mb-3 fs-3">聯絡資訊</p>
                 <ul>
-                    <li class="fs-5"><i class="bi bi-telephone-fill fs-4"></i> 02-2701 0928<br>
+                    <li class="fs-6"><i class="bi bi-telephone-fill fs-6"></i> 02-2701 0928<br>
                         (週一至週五12:00 ~ 18:30)
                     </li>
-                    <li class="fs-5"><i class="bi bi-envelope-fill"></i> core@codedriven.org</li>
-                    <li class="fs-5"><i class="bi bi-geo-alt-fill"></i> 台北市大安區復興南路一段360號3樓</li>
+                    <li class="fs-6"><i class="bi bi-envelope-fill"></i> core@codedriven.org</li>
+                    <li class="fs-6"><i class="bi bi-geo-alt-fill"></i> 台北市大安區復興南路一段360號3樓</li>
                 </ul>
             </div>
         </div>

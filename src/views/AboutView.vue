@@ -69,6 +69,8 @@ export default {
 .alex{
     float: right;
     position: relative;
+    bottom: 100px;
+    right: 30px;
 }
 .about{
   z-index: -1;

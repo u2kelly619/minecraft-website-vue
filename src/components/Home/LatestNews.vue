@@ -16,6 +16,29 @@
         </div>
       </div>
   
+    <!-- expanding cards -->
+  <div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+      <div class="col col-md-9 d-flex">
+        <div class="panel active" @click="expand($event)">
+            <h3>探索屬於自己的獨特世界</h3>
+        </div>
+        <div class="panel" @click="expand($event)">
+            <h3>在荒野中，踏上冒險旅途</h3>
+        </div>
+        <div class="panel" @click="expand($event)">
+            <h3>漫無目的地遊蕩，或是探尋新鮮事物</h3>
+        </div>
+        <div class="panel" @click="expand($event)">
+            <h3>整個世界任您挖掘</h3>
+        </div>
+        <div class="panel" @click="expand($event)">
+            <h3>盡情發揮想像力進行建造</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
       <h2 class="fs-1 fw-bolder my-5">最新消息</h2>
         <div class="col col-md-10 col-lg-10 accordion" id="accordionExample">
           <div class="accordion-item">
@@ -86,6 +109,22 @@
 </template>
 
 <script>
+// const panels = document.querySelectorAll('.panel');
+
+// panels.forEach((panel) => {
+//     panel.addEventListener('click', () => {
+//         //remove其他active的class
+//         removeActiveClasses()
+//         //再替該panel加上active的class
+//         panel.classList.add('active')
+//     })
+// })
+
+// function removeActiveClasses() {
+//     panels.forEach((panel) => {
+//         panel.classList.remove('active')
+//     })
+// }
 
 export default {
   name: 'LatestNews',
@@ -105,6 +144,16 @@ export default {
       navigator.clipboard.writeText(server.textContent);
       /* Alert the copied text */
       // alert("Copied the text: " + server.textContent);
+    },
+    expand(e) {
+      let panels = document.querySelectorAll('.panel');
+      //remove其他active的class
+      panels.forEach((panel) => {
+          panel.classList.remove('active')
+          //再替該panel加上active的class
+          e.target.classList.add('active')
+      })
+      console.log(e.target)
     }
   }
 };
@@ -169,5 +218,75 @@ export default {
     transition: 0.2s;
     width: auto;
     opacity:0;
+}
+
+.container {
+	display: flex;
+	/* width: 90vw; */
+}
+
+.panel {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 50vh;
+	border-radius: 20px;
+	cursor: pointer;
+	flex: 0.5;
+	/* 有active的class時才變寬，flex:5 */
+	margin: 10px;
+	position: relative; 
+	/* 裡面的h3用absolute */
+	transition: flex 0.4s ease-in;
+	/* 展開的動畫效果 */
+}
+
+.panel:nth-of-type(1) {
+  background-image: url('../../assets/bg/2022-04-22_02.45.39.png')
+}
+.panel:nth-of-type(2) {
+  background-image: url('../../assets/bg/2022-04-22_02.33.39.png')
+}
+.panel:nth-of-type(3) {
+  background-image: url('../../assets/bg/2022-04-22_02.44.16.png')
+}
+.panel:nth-of-type(4) {
+  background-image: url('../../assets/bg/2022-04-22_02.32.36.png')
+}
+.panel:nth-of-type(5) {
+  background-image: url('../../assets/bg/2022-04-22_02.49.37.png')
+}
+
+.panel h3 {
+	color: #fff;
+	font-size: 24px;
+  text-align: start;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	margin: 0;
+	opacity: 0;
+	/* 有active的class時才opacity:1顯示文字 */
+}
+
+.panel.active {
+	/* 有active時變寬展開 */
+	flex:5;
+}
+
+.panel.active h3 {
+	/* 有active時顯示文字 */
+	opacity: 1;
+	transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media(max-width: 480px){
+	.container {
+		width: 100vw;
+	}
+	/* 螢幕太小時隱藏第4、5張圖片 */
+	.panel:nth-of-type(4), .panel:nth-of-type(5) {
+		display: none;
+	}
 }
 </style>

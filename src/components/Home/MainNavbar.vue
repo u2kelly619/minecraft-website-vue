@@ -7,7 +7,7 @@
                 <i class="bi bi-list"></i>
                 </div>
                 <nav>
-                    <ul id='menu' class="col menu overflow-hidden fs-3 fw-bold">
+                    <ul id='menu' class="col menu overflow-hidden fs-5">
                         <li><router-link to="/">首頁</router-link> </li>
                         <li><router-link to="/about">關於</router-link></li>
                         <li><router-link to="/products">比賽周邊</router-link></li>
@@ -54,7 +54,7 @@ nav a{
 display: inline-block;
 width: 200px;
 height: 70px;
-padding: 15px 0 15px 0;
+padding: 20px 0;
 color: black;
 }
 

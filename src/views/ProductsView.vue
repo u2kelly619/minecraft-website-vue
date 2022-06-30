@@ -40,6 +40,8 @@ export default {
 .chicken{
     float: right;
     position: relative;
+    bottom: 80px;
+    right: 30px;
 }
     /* main-background */
     .main-background{
