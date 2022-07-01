@@ -20,19 +20,19 @@
   <div class="container-fluid mt-5">
     <div class="row justify-content-center">
       <div class="col col-md-9 d-flex">
-        <div class="panel active" @click="expand($event)">
+        <div id="1" class="panel active" @click="expand(1)">
             <h3>探索屬於自己的獨特世界</h3>
         </div>
-        <div class="panel" @click="expand($event)">
+        <div id="2" class="panel" @click="expand(2)">
             <h3>在荒野中，踏上冒險旅途</h3>
         </div>
-        <div class="panel" @click="expand($event)">
+        <div id="3" class="panel" @click="expand(3)">
             <h3>漫無目的地遊蕩，或是探尋新鮮事物</h3>
         </div>
-        <div class="panel" @click="expand($event)">
+        <div id="4" class="panel" @click="expand(4)">
             <h3>整個世界任您挖掘</h3>
         </div>
-        <div class="panel" @click="expand($event)">
+        <div id="5" class="panel" @click="expand(5)">
             <h3>盡情發揮想像力進行建造</h3>
         </div>
       </div>
@@ -131,6 +131,7 @@ export default {
   data: function () {
     return {
       flag: false
+
     }
   },
   methods: {
@@ -145,15 +146,18 @@ export default {
       /* Alert the copied text */
       // alert("Copied the text: " + server.textContent);
     },
-    expand(e) {
+    expand(panelNum) {
       let panels = document.querySelectorAll('.panel');
+      let panelId = document.getElementById(''+panelNum+'');
+      // console.log(panelId)
+      // console.log(panelNum)
       //remove其他active的class
       panels.forEach((panel) => {
           panel.classList.remove('active')
           //再替該panel加上active的class
-          e.target.classList.add('active')
+          panelId.classList.add('active')
       })
-      console.log(e.target)
+      
     }
   }
 };
@@ -267,6 +271,7 @@ export default {
 	margin: 0;
 	opacity: 0;
 	/* 有active的class時才opacity:1顯示文字 */
+  /* display: none; */
 }
 
 .panel.active {
@@ -276,6 +281,7 @@ export default {
 
 .panel.active h3 {
 	/* 有active時顯示文字 */
+  /* display: block; */
 	opacity: 1;
 	transition: opacity 0.3s ease-in 0.4s;
 }
