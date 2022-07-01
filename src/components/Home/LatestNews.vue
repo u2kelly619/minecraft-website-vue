@@ -20,19 +20,19 @@
   <div class="container-fluid mt-5">
     <div class="row justify-content-center">
       <div class="col col-md-9 d-flex">
-        <div id="1" class="panel active" @click="expand(1)">
+        <div class="panel active">
             <h3>探索屬於自己的獨特世界</h3>
         </div>
-        <div id="2" class="panel" @click="expand(2)">
+        <div class="panel">
             <h3>在荒野中，踏上冒險旅途</h3>
         </div>
-        <div id="3" class="panel" @click="expand(3)">
+        <div class="panel">
             <h3>漫無目的地遊蕩，或是探尋新鮮事物</h3>
         </div>
-        <div id="4" class="panel" @click="expand(4)">
+        <div class="panel">
             <h3>整個世界任您挖掘</h3>
         </div>
-        <div id="5" class="panel" @click="expand(5)">
+        <div class="panel">
             <h3>盡情發揮想像力進行建造</h3>
         </div>
       </div>
@@ -109,23 +109,6 @@
 </template>
 
 <script>
-// const panels = document.querySelectorAll('.panel');
-
-// panels.forEach((panel) => {
-//     panel.addEventListener('click', () => {
-//         //remove其他active的class
-//         removeActiveClasses()
-//         //再替該panel加上active的class
-//         panel.classList.add('active')
-//     })
-// })
-
-// function removeActiveClasses() {
-//     panels.forEach((panel) => {
-//         panel.classList.remove('active')
-//     })
-// }
-
 export default {
   name: 'LatestNews',
   data: function () {
@@ -146,18 +129,23 @@ export default {
       /* Alert the copied text */
       // alert("Copied the text: " + server.textContent);
     },
-    expand(panelNum) {
-      let panels = document.querySelectorAll('.panel');
-      let panelId = document.getElementById(''+panelNum+'');
-      // console.log(panelId)
-      // console.log(panelNum)
-      //remove其他active的class
-      panels.forEach((panel) => {
-          panel.classList.remove('active')
-          //再替該panel加上active的class
-          panelId.classList.add('active')
-      })
-      
+  },
+  mounted(){
+    const panels = document.querySelectorAll('.panel');
+
+    panels.forEach((panel) => {
+        panel.addEventListener('click', () => {
+            //remove其他active的class
+            removeActiveClasses()
+            //再替該panel加上active的class
+            panel.classList.add('active')
+        })
+    })
+
+    function removeActiveClasses() {
+        panels.forEach((panel) => {
+            panel.classList.remove('active')
+        })
     }
   }
 };
