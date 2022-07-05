@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-        <img class="herobrine" src="../assets/Herobrine.png" alt="">
+        <img class="herobrine" src="../assets/Donkey.png" alt="">
     </section>
   <MyFooter></MyFooter>
 </template>
@@ -42,6 +42,7 @@ export default {
 
 <style scoped>
 .herobrine{
+    width: 200px;
     float: right;
     position: relative;
     bottom: 100px;
@@ -76,7 +77,7 @@ export default {
     } */
 
     @media screen and (max-width: 992px){
-      .chicken{
+      .herobrine{
           display: none;
       }
     }

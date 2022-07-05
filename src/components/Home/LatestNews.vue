@@ -1,12 +1,17 @@
 <template>
+<div class="container-fluid main-background"></div>
+
 <div class="container-fluid news p-5">
-    <div class="row d-flex justify-content-center text-center fs-3">
-      <img src="@/assets/2022.png" class='minecraft-banner mt-5 w-75' alt="">
+    <div class="row justify-content-center text-center">
+      <div class="col col-md-8">
+        <img src="@/assets/2022.png" class='minecraft-banner mt-5 img-fluid' alt="">
+        <img src="@/assets/明道場.png" class='minecraft-banner img-fluid' alt="">
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center text-center fs-3 mt-5">
       <div class="col col-md-4">
-        <h2 class="fs-1 fw-bolder">明道場</h2>
-        <h5 class="">伺服器位置</h5>
         <div class="d-flex justify-content-center">
-          <div class="border px-5">
+          <div class="border px-5 link-box">
             <span class="pixel" id="server">mbc94.ntc.im</span>
           </div>
           <div class="tooltip__layout" @click="flagClick">
@@ -15,9 +20,10 @@
           </div>
         </div>
       </div>
-  
+    </div>
+  </div>
     <!-- expanding cards -->
-  <div class="container-fluid mt-5">
+  <div class="container-fluid expanding-cards">
     <div class="row justify-content-center">
       <div class="col col-md-9 d-flex">
         <div class="panel active">
@@ -39,8 +45,10 @@
     </div>
   </div>
 
-      <h2 class="fs-1 fw-bolder my-5">最新消息</h2>
-        <div class="col col-md-10 col-lg-10 accordion" id="accordionExample">
+  <div class="container-fluid mb-5">
+    <div class="row justify-content-center">
+      <h2 class="fs-1 fw-bolder my-5 text-center">最新消息</h2>
+      <div class="col col-md-10 col-lg-10 accordion" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
               <button class="accordion-button collapsed"
@@ -106,6 +114,10 @@
       </div>
     </div>
   </div>
+      
+        
+    
+  
 </template>
 
 <script>
@@ -153,23 +165,46 @@ export default {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.main-background{
+    height: 100vh;
+    background: no-repeat center url('../../assets/bg/2022-04-22_02.44.16.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.news{
+    margin-top: -90vh;
+    margin-bottom: 40vh;
+}
+.expanding-cards{
+    margin-bottom: 5vh;
+}
 .panel-heading .accordion-toggle:before {
     content: "－";
 }
 .panel-heading .accordion-toggle.collapsed:before {
     content: "＋";
 }
+.minecraft-banner{
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
 .minecraft-banner:hover {
   transform: scale(1.1);
   transition: transform 0.5s ease;
 }
-
+.link-box{
+  background-color: #fff;
+}
 .pixel {
   font-family: 'VT323', monospace;
 }
 .copy {
   font-size: 20px;
-  color: #666;
+  font-weight: 700;
+  color: #fff;
 }
 .copy-btn{
   border: none;

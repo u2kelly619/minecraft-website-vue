@@ -1,7 +1,7 @@
 <template>
   <section>
         <subNavbar></subNavbar>
-    </section>
+  </section>
         <div class="container-fluid main-background"></div>
             <section class="container-fluid container main-products">
               <div class="main">
@@ -42,7 +42,7 @@
                       </div>
                   </div>
               </div>
-              <img class="alex" src="../assets/Alex.png" alt="">
+              <img class="alex" src="../assets/Cod.png" alt="">
           </section>
     <my-footer></my-footer>
 </template>
@@ -67,9 +67,10 @@ export default {
 
 <style scoped>
 .alex{
+    width: 200px;
     float: right;
     position: relative;
-    bottom: 100px;
+    bottom: 90px;
     right: 30px;
 }
 .about{

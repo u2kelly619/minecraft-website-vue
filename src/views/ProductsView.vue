@@ -38,6 +38,7 @@ export default {
 
 <style scoped>
 .chicken{
+    width: 200px;
     float: right;
     position: relative;
     bottom: 80px;
