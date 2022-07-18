@@ -11,13 +11,19 @@
                         <h1 class="mt-5 text-center fs-1 fw-bolder">元宇宙商圈</h1>
                     </div>
                 </div>
-                <div class="row card-items  g-5  p-5">
-                    <product-item></product-item>
+                <div class="row card-items g-5 p-3 mb-3 justify-content-center text-center">
+                    <div class="text">
+                        coming soon...
+                    </div>
+                    <!-- <img class="text" src="https://fakeimg.pl/200x100/?retina=1&text=coming soon...&font=noto"> -->
+                    <img class="alex" src="../assets/Alex.png" alt="">
+                    <img class="creeper" src="../assets/Creeper.png" alt="../assets/Creeper.png">
                 </div>
             </div>
         </div>
         <img class="herobrine" src="../assets/Donkey.png" alt="">
     </section>
+
   <MyFooter></MyFooter>
 </template>
 
@@ -41,6 +47,16 @@ export default {
 </script>
 
 <style scoped>
+.text{
+    color:#fff;
+    text-shadow: 0 0 5px #999;
+    font-size: 5rem;
+    padding: 0;
+}
+.alex{
+    width: 13%;
+    height: auto;
+}
 .herobrine{
     width: 200px;
     float: right;
@@ -77,12 +93,30 @@ export default {
     } */
 
     @media screen and (max-width: 992px){
+        
+        .text{
+            color:#fff;
+            text-shadow: 0 0 5px #999;
+            font-size: 3.2rem;
+        }
+        /* .text{
+            display: none;
+        } */
+        
       .herobrine{
           display: none;
       }
+      .alex{
+    display: none;
+}
+.creeper{
+            width: 45%;
+        }
+      
     }
 
     @media screen and (max-width: 576px){
+        
         /* .main-background{
             height: 50vh;
             background-size: cover;
@@ -91,6 +125,7 @@ export default {
             box-shadow: none ;
             border-radius: 0;
         }
+        
     }
     /* 卡片內容 */
     .card {
@@ -113,5 +148,10 @@ export default {
     .bi-star-fill {
     color: rgb(255, 208, 0);
     }
-
+    @media (min-width: 768px){
+        .creeper{
+            display: none;
+        }
+    }
+    
 </style>
