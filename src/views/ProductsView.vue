@@ -11,7 +11,7 @@
                         <h1 class="mt-5 text-center fs-1 fw-bolder">比賽周邊</h1>
                     </div>
                 </div>
-                <div class="row card-items  g-5  p-5">
+                <div class="row card-items  g-5  px-5">
                     <product-item></product-item>
                 </div>
             </div>
@@ -89,22 +89,22 @@ export default {
         }
     }
     /* 卡片內容 */
-    .card {
+    /* .card {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
     .card:hover {
         cursor: pointer;
         transform: scale(1.1);
         transition: transform 0.5s ease;
-    }
+    } */
     /* .item-img{
         width: 100%;
     } */
-    .card-img-top{
+    /* .card-img-top{
         width: 100%;
         height: 20rem;
         object-fit:  scale-down;
-    }
+    } */
 
     .bi-star-fill {
     color: rgb(255, 208, 0);

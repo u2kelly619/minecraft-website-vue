@@ -50,11 +50,11 @@ export default {
 .text{
     color:#fff;
     text-shadow: 0 0 5px #999;
-    font-size: 5rem;
+    font-size: 3rem;
     padding: 0;
 }
 .alex{
-    width: 13%;
+    width: 200px;
     height: auto;
 }
 .herobrine{
@@ -64,7 +64,9 @@ export default {
     bottom: 100px;
     right: 30px;
 }
-
+.creeper{
+    display: none;
+}
 /* main */
 .main-background{
     height: 100vh;
@@ -94,26 +96,27 @@ export default {
 
     @media screen and (max-width: 992px){
         
-        .text{
-            color:#fff;
-            text-shadow: 0 0 5px #999;
-            font-size: 3.2rem;
-        }
-        /* .text{
-            display: none;
-        } */
-        
-      .herobrine{
-          display: none;
-      }
-      .alex{
-    display: none;
-}
-.creeper{
-            width: 45%;
-        }
-      
+    .text{
+        color:#fff;
+        text-shadow: 0 0 5px #999;
+        font-size: 2rem;
     }
+    /* .text{
+        display: none;
+    } */
+    
+    .herobrine{
+        display: none;
+    }
+    .alex{
+        display: none;
+    }
+    .creeper{
+        display: block;
+        width: 200px;
+    }
+
+}
 
     @media screen and (max-width: 576px){
         
@@ -127,31 +130,28 @@ export default {
         }
         
     }
+    
     /* 卡片內容 */
-    .card {
+    /* .card {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
     .card:hover {
         cursor: pointer;
         transform: scale(1.1);
         transition: transform 0.5s ease;
-    }
+    } */
     /* .item-img{
         width: 100%;
     } */
-    .card-img-top{
+    /* .card-img-top{
         width: 100%;
         height: 20rem;
         object-fit:  scale-down;
-    }
+    } */
 
     .bi-star-fill {
     color: rgb(255, 208, 0);
     }
-    @media (min-width: 768px){
-        .creeper{
-            display: none;
-        }
-    }
+    
     
 </style>
