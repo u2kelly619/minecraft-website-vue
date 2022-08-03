@@ -56,7 +56,7 @@
                 data-bs-target="#collapseOne"
                 aria-expanded="false"
                 aria-controls="collapseOne">
-                [開箱]Google Home 智慧喇叭音質更好，可控制更多智能設備，讓居家變得更智慧
+                2022/07/16 【分支賽-取消公告】 
               </button>
             </h2>
             <div id="collapseOne"
@@ -64,9 +64,7 @@
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample">
               <div class="accordion-body fs-6">
-                <strong>This is the item's accordion body.</strong>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam vitae in aliquam quia quo nisi magni provident hic, ipsam, cupiditate unde! Nisi, fuga ducimus mollitia cumque dolores in hic quas!
-                Alias ducimus reiciendis nisi ullam iure facilis mollitia, exercitationem sunt ut consectetur expedita aspernatur. Cupiditate vitae deserunt voluptate fuga quas tempora, fugiat accusamus, ex nemo praesentium quisquam vero, quam inventore.
+                大家好!!因今年疫情影響主賽事往後延遲，造成分支競賽時間往後，與原本『2023年麥塊建築大賽-還原古蹟』的賽事，產生過度重疊，所以我們忍痛取消，將所有資源投注在明年的活動上。
               </div>
             </div>
           </div>
@@ -78,7 +76,7 @@
                 data-bs-target="#collapseTwo"
                 aria-expanded="false"
                   aria-controls="collapseTwo">
-                Nintendo Switch 官方推出紙模，善用瓦楞紙板，打造周邊配件省錢又環保
+                2022/05/17【邀請賽-FINAL延期公告】
               </button>
             </h2>
             <div id="collapseTwo"
@@ -86,8 +84,11 @@
               aria-labelledby="headingTwo"
               data-bs-parent="#accordionExample">
               <div class="accordion-body fs-6">
-                <strong>This is the second item's accordion body.</strong>
-                It is hidden by default, unti
+                依照中央疫情指揮中心推估疫情發展，本波疫情確診高峰將落在五月底六月初，加上國小學童於本月陸續開始施打疫苗，預計七月後疫情緩解時，再舉辦實體活動家長較為放心，本會與各合辦學校會議後決定，今年邀請賽最後一次延期，目前確定時間如無法執行，則轉成線上競賽實體頒獎舉辦。 
+                <p>- 北護場 08/27 舉辦<br>
+                - 文大場 9/4 舉辦<br>
+                - 明道場暑假後待定<br>
+                - 真理場暑假後待定</p>
               </div>
             </div>
           </div>
@@ -98,7 +99,7 @@
               data-bs-target="#collapseThree"
               aria-expanded="false"
               aria-controls="collapseThree">
-              新版Macbook豆腐插，不但能充筆電還能充手機、平板、相機，所有配件
+              2022/05/04【邀請賽-因疫情延期公告 Update】 
             </button>
           </h2>
           <div id="collapseThree"
@@ -106,8 +107,11 @@
           aria-labelledby="headingThree"
           data-bs-parent="#accordionExample">
             <div class="accordion-body fs-6">
-              <strong>This is the third item's accordion body.</strong>
-              It is hidden by default, until th
+              教育部於04/12發佈新指引後，本會與參與邀請賽學校將重新調整邀請時間，目前最新資訊如下：
+              <p>- 北護場暫時延至 05/28 舉辦<br>
+                - 文大場暫時延至 05/29 舉辦<br>
+                - 明道場暫時延至 07/02 舉辦<br>
+                - 真理場待定-延至暑假後擇期舉辦</p>
             </div>
           </div>
         </div>
