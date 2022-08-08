@@ -28,7 +28,7 @@
       <div class="col-md-6 col-sm-12 row text-center mb-5">
         <div class="title mb-5 text-center fs-1 fw-bold">社群平台</div>
         <a class="col-6" href="https://www.facebook.com/codedriven/" target="_blank"><img src="@/assets/homepage/fbicon.png" alt="粉專"></a>
-        <a class="col-6" href="" target="_blank">
+        <a class="col-6" href="https://discord.gg/z4FeUD9qAz" target="_blank">
           <img src="@/assets/homepage/discord.png" alt="discord">
         </a>
       </div>

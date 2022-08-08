@@ -12,7 +12,8 @@
       <div class="col col-md-4">
         <div class="d-flex justify-content-center">
           <div class="border px-5 link-box">
-            <span class="pixel" id="server">mbcmdu.ntc.im</span>
+            <!-- <span class="pixel" id="server">mbcmdu.ntc.im</span> -->
+            <span class="pixel" id="server">mingdao.ntc.im</span>
           </div>
           <div class="tooltip__layout" @click="flagClick">
             <span class="ms-2"><i class="bi bi-files copy"></i></span>
