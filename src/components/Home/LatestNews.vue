@@ -141,11 +141,46 @@ export default {
         this.flag = false
       }, 1000)
       let server = document.getElementById('server');
+      this.copyTextToClipboard(server.textContent)
       /* Copy the text inside the text field */
-      navigator.clipboard.writeText(server.textContent);
+      // navigator.clipboard.writeText(server.textContent);
       /* Alert the copied text */
       // alert("Copied the text: " + server.textContent);
     },
+    fallbackCopyTextToClipboard(text) {
+      var textArea = document.createElement("textarea");
+      textArea.value = text;
+      
+      // Avoid scrolling to bottom
+      textArea.style.top = "0";
+      textArea.style.left = "0";
+      textArea.style.position = "fixed";
+
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+
+      try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        // console.log('Fallback: Copying text command was ' + msg);
+      } catch (err) {
+        // console.error('Fallback: Oops, unable to copy', err);
+      }
+
+      document.body.removeChild(textArea);
+    },
+    copyTextToClipboard(text) {
+      if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text);
+        return;
+      }
+      navigator.clipboard.writeText(text).then(function() {
+        // console.log('Async: Copying to clipboard was successful!');
+      }, function(err) {
+        // console.error('Async: Could not copy text: ', err);
+      });
+    }
   },
   mounted(){
     const panels = document.querySelectorAll('.panel');
